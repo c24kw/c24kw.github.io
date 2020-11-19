@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		#kiera{
+			width:1000px;
+			height:500px;
+			background-color:lightblue;
+
+			
+			animation-duration:5s;
+			animation-iteration-count: 1;
+
+
+		}
+
+		@keyframes changeColor{
+			0%{
+				background-color: purple
+			}
+
+			50%{
+				background-color:lightblue;
+			}
+
+
+			100%{
+				background-color:purple;
+			}
+
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="kiera">
+
+	<script type="text/javascript">
+		
+		var box = document.getElementById('kiera');
+
+		box.addEventListener("click", function(){
+			box.style.animationName="changeColor";
+
+			box.innerText = "I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you I love you :)";
+
+		}
+
+			)
+	</script>
+	
+</div>
+</body>
+</html>
