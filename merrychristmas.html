@@ -8,27 +8,25 @@
 		#kiera{
 			width:1000px;
 			height:500px;
-			background-color:lightblue;
+			background-color:red;
 
 			
-			animation-duration:5s;
-			animation-iteration-count: 1;
-
-
+			animation-duration:3s;
+			animation-iteration-count: infinite;
 		}
 
 		@keyframes changeColor{
 			0%{
-				background-color: purple
+				background-color: red
 			}
 
 			50%{
-				background-color:lightblue;
+				background-color:green;
 			}
 
 
 			100%{
-				background-color:purple;
+				background-color:red;
 			}
 
 		}
@@ -46,7 +44,7 @@
 		box.addEventListener("click", function(){
 			box.style.animationName="changeColor";
 
-			box.innerText = "Happy Thanksgiving!! ";
+			box.innerText = "Merry Christmas :)";
 
 		}
 
