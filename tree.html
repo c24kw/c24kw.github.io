@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#tree{
+	width: 1000px;
+	height:1000px;
+	animation-name: dance;
+	animation-duration: 3s;
+	background-image: url(https://www.seekpng.com/png/detail/17-176759_blank-christmas-tree-clip-art-christmas-tree-clipart.png);
+	background-repeat: no-repeat;
+	}	
+
+	@keyframes dance{
+0%{transform:rotate(-90deg);}
+50%{transform:rotate(90deg);}
+100%{transform:rotate(-90deg);}
+
+	}
+	</style>
+</head>
+<body>
+
+<div id="tree">
+<div id="ornament"> </div>
+
+</div>
+
+<script type="text/javascript">
+var tree = document.getElementById("tree")
+	tree.addEventListener("click",
+	 function(event){
+	 	let ornament = document.createElement('div');
+	 	tree.classList.add('ornament');
+	 	ornament.style.left = event.clientX - 5 + "px";
+	 	ornament.style.top = event.clientY - 5 + "px";
+	 	tree.appendChild(ornament);
+	 	console.log(event);
+	 })
+</script>
+</body>
+</html>
