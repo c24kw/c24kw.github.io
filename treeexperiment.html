@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">	
+		#question{
+			width:800px;
+			height:500px;
+/*			border:1px solid black;
+*/			background-size:contain;
+			background-position:center;
+			background-repeat:no-repeat;
+		}
+#button{
+			width: 600px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<center><div id="question"></div></center>
+	<center><button id="button">What album defines you?</button></center>
+	<div id="random"></div>
+	<script type="text/javascript">
+		var box = document.getElementById("albumbox");
+		var button = document.getElementById("button");
+		button.addEventListener("click", function(){
+			var random = Math.round(Math.random()*5);
+			console.log(random)
+			box.style.backgroundImage=list[random];
+		})
+		var list = [
+		"url(https://images-na.ssl-images-amazon.com/images/I/61Ydxi702wL._SL1200_.jpg)",
+
+		"url(https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Taylor_Swift_-_Folklore.png/220px-Taylor_Swift_-_Folklore.png)", 
+
+		"url(https://upload.wikimedia.org/wikipedia/en/b/bf/SZA_-_Ctrl_cover.png)",
+
+		"url(https://upload.wikimedia.org/wikipedia/en/f/f2/Taylor_Swift_-_Reputation.png)",
+
+		"url(https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/EllaMaiSelfTitled.png/220px-EllaMaiSelfTitled.png)",
+
+		"url(https://images.squarespace-cdn.com/content/v1/5dc787eb06a5ea221df20ae3/1579792504292-BVHKJ4ERDLONAZGJ0NFV/ke17ZwdGBToddI8pDm48kCUKGS0zPYowZ-Jx5ohs3bh7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmlNp_D6vYztSlEBUppQhG6Vl45N0_Sx-Zz4N9w5U9eGRsXPlE_1RsckhPNg40mK6H/iyla_OTHERWAYS2VENT_EPcover_small.png?format=1500w)",
+

@@ -3,41 +3,43 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	#tree{
-	width: 1000px;
-	height:1000px;
-	animation-name: dance;
-	animation-duration: 3s;
-	background-image: url(https://www.seekpng.com/png/detail/17-176759_blank-christmas-tree-clip-art-christmas-tree-clipart.png);
-	background-repeat: no-repeat;
-	}	
-
-	@keyframes dance{
-0%{transform:rotate(-90deg);}
-50%{transform:rotate(90deg);}
-100%{transform:rotate(-90deg);}
-
-	}
+		body{
+			margin:0px;
+			background-color:red;
+		}
+		#tree{
+			height:600px;
+			background-image: url(https://www.seekpng.com/png/detail/17-176759_blank-christmas-tree-clip-art-christmas-tree-clipart.png);
+			width:800px;
+		}
+		.circle{
+			width:20px;
+			height:20px;
+			border-radius:50%;
+			background-color:red;
+			position: absolute;
+/*			display: inline-block;
+*/		}
 	</style>
 </head>
 <body>
-
-<div id="tree">
-<div id="ornament"> </div>
-
-</div>
-
+<center><div id='tree'></div></center>
 <script type="text/javascript">
-var tree = document.getElementById("tree")
-	tree.addEventListener("click",
-	 function(event){
-	 	let ornament = document.createElement('div');
-	 	tree.classList.add('ornament');
-	 	ornament.style.left = event.clientX - 5 + "px";
-	 	ornament.style.top = event.clientY - 5 + "px";
-	 	tree.appendChild(ornament);
-	 	console.log(event);
-	 })
+	let tree = document.getElementById('tree')
+	// 1. make a div
+	// 2. give the div a class
+	// 3. put the div in the body or in the tree
+tree.addEventListener('click', function makeOrnament(event){
+	let ornament = document.createElement('div');
+ornament.classList.add("circle");
+tree.appendChild(ornament);
+ornament.style.left = event.clientX -10 + "px";
+ornament.style.top = event.clientY -10 + "px";
+});
 </script>
 </body>
 </html>
+
+
+
+
